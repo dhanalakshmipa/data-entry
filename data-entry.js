@@ -113,7 +113,7 @@ var $insertButton = $('<button/>', {
         console.log(selectedTktOption);
         var first = true;
         var valuesCleaned = [];
-        value.split(/[\s\n,.-\/]/).forEach(function (val, index) {
+        value.split(/[-\s\n,.\/]/).forEach(function (val, index) {
             var formatted = parseInt(val.trim());
             if (val.trim().length > 0 && !isNaN(formatted)) {
                 valuesCleaned.push(val.trim());
